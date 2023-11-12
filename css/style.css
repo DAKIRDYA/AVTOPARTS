@@ -1,0 +1,312 @@
+@font-face {
+    font-family: 'Geometria';
+    src: local('Geometria Medium'), local('Geometria-Medium'),
+        url('../font/Geometria-Medium.woff2') format('woff2'),
+        url('../font/Geometria-Medium.woff') format('woff'),
+        url('../font/Geometria-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Geometria';
+    src: local('Geometria Bold'), local('Geometria-Bold'),
+        url('../font/Geometria-Bold.woff2') format('woff2'),
+        url('../font/Geometria-Bold.woff') format('woff'),
+        url('../font/Geometria-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  body 
+  {
+        margin:0;
+        padding:0;
+        font-family: "Geometria", serif;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFF;
+        background-color: #EDEDED;
+        
+  }
+  li{
+    list-style-type: none;
+  }
+/*HEADER*/
+  img{
+    display: block;
+  }
+  .main-header
+  {
+    margin:0;
+    padding:0;
+    width: 1640px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../img/main-banner-fon.png");
+    background-position:0 0;
+    background-repeat: no-repeat;
+   
+
+  }
+  .main-header h1
+  {
+    margin:155px auto auto 256px;
+    padding:0;
+    font-size: 48px;
+    text-transform: uppercase;
+    line-height: normal;
+  }
+  .main-nav{
+    opacity: 0.85;
+    background: #0E0E0E;
+    display:flex;
+    
+  }
+  .nav-logo{
+    margin: 24px 32px 18px 268px;
+
+  }
+  .nav-list
+  {
+    margin: 50px 31px 26px 0;
+    padding:0;
+    text-transform: uppercase;
+    display: flex;
+  }
+  .nav-list-item
+  {
+        margin:0;
+        padding:0;
+        margin-left:28px;
+  }
+  .nav-list-item a{
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;    
+    text-decoration: none;
+}
+
+  .button-red{
+    padding:0;
+    background-color:transparent;
+    border: 4px solid #D42E12;
+    color: #FFF;
+    text-align: center;
+  }
+    .button-red:hover{
+        cursor: pointer;
+    }
+
+  
+  /*кнопка в навигации*/
+  .main-nav .button-red{
+    
+    margin: 42px 23px 18px 0;
+    width: 168px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+  
+  }
+  .nav-find{
+    margin: 42px 12px 18px 0;
+    padding:0;
+    
+  }
+  .nav-basket{
+    margin: 42px 0px 18px 0;
+    padding:0;
+  }
+  .nav-basket-count{
+    margin: 42px auto 18px 0;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: block;
+    
+    border: 0px solid transparent;
+    border-radius: 50%;
+    background-color: rgba(197, 55, 32, 1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;        
+  }
+  
+  /*Кнопка перейти в каталог*/
+
+  .go-catalog{
+    width: 216px;
+    height: 52px;
+    margin: 52px auto 189px 256px;
+    padding: 0;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+
+  .help-list
+  {
+    margin:0 auto 0 auto;
+    padding:0;
+    width: 1640px;
+    
+    background: #0E0E0E;
+    line-height: 18px;
+    display:flex;
+    
+    justify-content: center;
+    gap:0px;
+  }
+  .help-list-item
+  {
+    width: 282px;
+    height: 272px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .help-list-item:nth-child(1) 
+  {background-image: url("../img/Redfon.png");}
+  
+  /*HEADER конец*/
+
+
+
+
+
+    /* MAIN Автозапчасти и услуги*/
+  .avto-parts
+  {
+    margin:0 0 88 0;
+    width: 1640px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../img/avto-parts fon.png");
+    
+    
+  }
+  .avto-parts h2{
+    color: var(--black2, #1D1D1D);
+    text-align: center;
+    font-size: 36px;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .avto-parts blockquote{
+    color: var(--black2, #1D1D1D);
+    text-align: center;
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  /*полупрозрачность фона пункта АКБ*/
+  .accu{
+    position: relative;
+    width: 360px;
+    height: 400px;
+    background-color: rgb(0,0,0,1);
+  }
+  .accu img{
+    opacity: 0.2;
+  }
+  .accu p, .accu button{
+    position: absolute;
+    top:0;/*временно*/
+    left:0;/*временно*/
+  }
+    
+  
+  /*Услуги*/
+  .service{
+        margin:0 auto 0 auto;
+        padding: 0;
+        position:relative;
+        width: 1640px;
+        background: radial-gradient(24.05% 24.05% at 50% 56.14%, rgba(14, 14, 14, 0.70) 0%, rgba(14, 14, 14, 0.97) 100%);
+    }  
+  .service .fon{
+        opacity: 0.2;
+  }
+  
+  .service .content{
+        position: absolute;   
+        padding: 0;
+        top:0;
+        left:0;
+  }
+
+  .service h2{
+    padding: 0;
+    font-size: 36px;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .service blockquote{
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: normal;
+  }
+  .service-list{
+    margin: 0;
+    padding: 0;
+  }
+  /*полупрозрачность фона пункта Бесплатная консультация*/
+  .service-list-item{
+    position: relative;
+    width: 605px;
+    height: 200px;
+    margin:0 0 40px 0;
+    
+  }
+  
+  .service-list-item .content{
+    position: absolute;
+    top:0;/*временно*/
+    left:0;/*временно*/
+  }
+
+  .face, .akb, .diag{
+    position: absolute;
+    top:15px;
+    left:15px;
+  }
+
+/*ABOUT*/
+
+  .about{
+    margin:0 auto 0 auto;
+    padding: 0;
+    width: 1640px;
+    position: relative;
+  }
+  .about .content{
+    position: absolute;   
+    padding: 0;
+    top:0;
+    left:0;
+}
+
+
+
+  
+
+
+  
+
+  
+  

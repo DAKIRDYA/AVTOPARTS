@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Глваная</title>
+    <title>Главная</title>
     <meta charset="UTF-8"></meta>
     <!--Подключение CSS-->
+    <link href="css/style.css" rel="stylesheet">
+
     <!--Подключение шрифтов-->
 </head>
 <body>
@@ -19,8 +21,7 @@
     <!--Главный баннер-->
     <header class="main-header">
         <nav class="main-nav">
-           <img src="img/img.png" alt="Фон главного баннера">
-           <a href="#"><img src="img/img.png" alt="Логотип"></a>
+           <a class="nav-logo" href="#"><img src="img/logo.png" width=132 height=58 alt="Логотип"></a>
            <ul class="nav-list"> 
                 <li class="nav-list-item"><a href="#">Компания</a></li>
                 <li class="nav-list-item"><a href="#">Каталог</a></li>
@@ -28,82 +29,85 @@
                 <li class="nav-list-item"><a href="#">Информация</a></li>
                 <li class="nav-list-item"><a href="#">Контакты</a></li>
            </ul>
-           <button class="button-red" type="button">Заказать</button>
-           <div><a href="#">Заказать</a>
-           <a href="#"><img src="img/img.png" alt="Найти"></a>
-           <a href="#"><img src="img/img.png" alt="Корзина"></a>
-           <a href="#"><img src="img/img.png" alt="Количество"></a>
+           <button class="button-red" type="button">Заказать звонок</button>
+           
+           <a class="nav-find" href="#"><img src="img/find icon.png" width=25.4 height=26.4 alt="Найти"></a>
+           <a class="nav-basket" href="#"><img src="img/basket icon.svg" width=32 height=32 alt="Корзина"></a>
+           <div class="nav-basket-count">0</div>
         </nav>
+
+
+
         <h1>Надежные <br> качественные <br>аккумуляторы</h1>
-        <button class="button-red" type="button">Перейти в каталог</button>
+        <button class="button-red go-catalog" type="button">Перейти в каталог</button>
+
+
         <ul class="help-list">
-            <li class="help-list-item calculation">
-                <a href="#">
-                    <img src="img/img.png" alt="Расчет">
-                    <p>Наличный и безналичный <br> расчет</p>
-                </a>
+
+            <li class="help-list-item">
+                        <img src="img/Nal beznal.png" width=130 height=79 alt="Расчет">
+                        <p>Наличный и безналичный <br> расчет</p>
             </li>
             <li class="help-list-item">
-                <a href="#">
-                    <img src="img/img.png" alt="Консультация">
+                    <img src="img/help.svg" width=84 height=92 alt="Консультация">
                     <p>Техническая помощь и<br> консультация</p>
-                    
-                </a>
             </li>
             <li class="help-list-item">
-                <img src="img/img.png" alt="Качество">
+                <img src="img/quality.svg" width=76 height=91.84 alt="Качество">
                 <p>Только качественная и<br> проверенная продукция</p>                
-                <a href="#">
-                    <img src="img/img.png" alt="Перейти">
+                <a class="go-quality" href="#">
+                    <img src="img/Union (1).svg" width=51 height=20 alt="Перейти">
                 </a>
             </li>
             <li class="help-list-item">
-                <img src="img/img.png" alt="Качество">
+                <img src="img/alwaysonline.svg" width=106 height=87 alt="Мы на связи">
                 <p>Мы всегда на связи<br>с 9:00 до 18:00</p>                
-                <a href="#">
-                    <img src="img/img.png" alt="Перейти">
+                <a class="go-to-us" href="#">
+                    <img  src="img/Union (1).svg" width=51 height=20 alt="Перейти">
                 </a>
             </li>
         </ul>
+      
     </header>
     <!--Главный баннер - конец-->
     <main>
 
         <!--Автозапчасти и услуги-->
         <section class="avto-parts">
-            <h2>  Автотовары: аксессуары, расходники и многое другое  </h2>
-            <blockquote>PROAuto - это специализированный интернет магазин востребованных товаров для автомобилей.</blockquote>
+
+            <h2>  Автотовары: аксессуары,<br> расходники и многое другое  </h2>
+            <blockquote>PROAuto - это специализированный интернет магазин востребованных<br> товаров для автомобилей.</blockquote>
             <ul class="avto-parts-list">
-                <li class="avto-parts-list-item">
-                    <a href="#">
-                        <img src="img/img.png" alt="Аккумуляторы">
+                <li class="avto-parts-list-item accu">
+                    
+                        <img src="img/avtoparts AKB.png" width=360 height=400 alt="Аккумуляторы"><!--это фон пункта-->
                         <p>Аккумуляторы</p>
                         <button class="button-red" type="button">Заказать онлайн</button>
+                    
+                </li>
+                <li class="avto-parts-list-item">
+                    <a href="#">
+                        <img src="img/EngineOil-Change.png"  width=360 height=400 alt="Замена масла">
                     </a>
                 </li>
                 <li class="avto-parts-list-item">
                     <a href="#">
-                        <img src="img/img.png" alt="Замена масла">
+                        <img src="img/avtoparts-cosmetic.png"  width=360 height=400 alt="Автокосметика">
                     </a>
                 </li>
                 <li class="avto-parts-list-item">
                     <a href="#">
-                        <img src="img/img.png" alt="Автокосметика">
+                        <img src="img/avtoparts-acsessuar.png"  width=360 height=400 alt="Автоаксессуары">
                     </a>
                 </li>
                 <li class="avto-parts-list-item">
                     <a href="#">
-                        <img src="img/img.png" alt="Автоаксессуары">
+                        <img src="img/avtoparts--hemical.png"  width=360 height=400 alt="Автохимия">
                     </a>
                 </li>
                 <li class="avto-parts-list-item">
                     <a href="#">
-                        <img src="img/img.png" alt="Автохимия">
-                    </a>
-                </li>
-                <li class="avto-parts-list-item">
-                    <a href="#">
-                        <img src="img/img.png" alt="Расходники">
+                        <img src="img/avtoparts-rashodniki.png" alt="Расходники">
                     </a>
                 </li>
             </ul>
@@ -111,49 +115,59 @@
 
         <!--Услуги-->
         <section class="service">
-            <img src="img/img.png" alt="Фон">
+            <img class="fon" src="img/service fon.png" alt="Фон">
+          <div class="content">
             <h2>Услуги</h2>
             <blockquote>Менеджеры компании с радостью ответят на ваши вопросы и помогут с выбором продукции.</blockquote>
             <ul class="service-list">
                 <li class="service-list-item important">
-                    <a href="#">
-                        <img class="back-item" src="img/img.png" alt="Фон пункта">
-                        <img src="img/img.png" alt="Консультация">
-                    </a>
-                    <h3>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА</h3>
-                    <p>Поможем с выбором аккумулятора, моторного масла и аксессуаров для автомобиля под ваши требования.</p>
+                    <img class="back-item" src="img/gradient red.png" width=605 height=200 alt="Фон пункта">
+                    <div class="content">
+                        <a href="#">
+                            <img src="img/Rectangle 6.svg" alt="Консультация">
+                        </a>
+                        <img class="face" src="img/Group 2 (1).png" alt="Консультация">
+                        <h3>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА</h3>
+                        <p>Поможем с выбором аккумулятора, моторного масла и аксессуаров для автомобиля под ваши требования.</p>
+                    </div>
                 </li>
                 <li class="service-list-item">
-                    <a href="#">
-                        <img class="back-item" src="img/img.png" alt="Фон пункта">
-                        <img src="img/img.png" alt="обмен АКБ">
-                    </a>
-                    <h3>ОБМЕН СТАРОГО АККУМУЛЯТОРА НА НОВЫЙ</h3>
-                    <p>Принесите нам старую АКБ для легкового автомобиля, и мы предоставим Вам скидку на новый аккумулятор!</p>
+                    <img class="back-item" src="img/Rectangle 6.png" width=124 height=120 alt="Фон пункта">
+                     <a href="#">
+                            <img class="akb" src="img/img.png" alt="обмен АКБ">
+                     </a>
+                     <h3>ОБМЕН СТАРОГО АККУМУЛЯТОРА НА НОВЫЙ</h3>
+                     <p>Принесите нам старую АКБ для легкового автомобиля, и мы предоставим Вам скидку на новый аккумулятор!</p>
                 </li>
                 <li class="service-list-item">
+                    <img class="back-item" src="img/Rectangle 6.png" width=124 height=120 alt="Фон пункта">
                     <a href="#">
-                        <img class="back-item" src="img/img.png" alt="Фон пункта">
-                        <img src="img/img.png" alt="диагностика АКБ">
+                        <img class="diag" src="img/img.png" alt="диагностика АКБ">
                     </a>
                     <h3>БЕСПЛАТНАЯ ДИАГНОСТИКА АККУМУЛЯТОРА</h3>
                     <p>Приезжайте к нам и мы бесплатно проведём диагностику вашего аккумулятора!</p>
                 </li>
             </ul>
-            <img src="img/img.png" alt="Механик">
+            <img src="img/mech.png" alt="Механик">
+            
             <button class="button-red" type="button">Задать вопрос</button>
+          </div>  
+          
         </section>
 
         <!--О компании-->
         <article class="about">
+            <img src="img/porsche-normal 1.png" alt="Фон">
+          <div class="content">
             <h2>о компании</h2>
-            <img src="img/img.png" alt="Фон менеджера">
-            <img src="img/img.png" alt="Менеджер">
+            <img class="back-item" src="img/Rectangle 6.png" width=360 height=347 alt="Фон менеджера">
+            <!--<img src="img/img.png" alt="Менеджер">-->
             <p>Машина плохо заводится? Аккумулятор вас подводит? Не проблема! Вам в «PRO Auto»! 
                 Мы подберём хороший, надёжный, а главное недорогой аккумулятор именно для вашего авто! 
                 С 1997 года сеть магазинов «PRO Auto» занимается продажей автомобильных аккумуляторов, масел, расходных материалов, химией и аксессуаров.
             </p>
             <button class="button-red" type="button">Узнать больше</button>
+           </div>
         </article>
 
         <!--Новости-->
