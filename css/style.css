@@ -91,11 +91,15 @@
 }
 
   .button-red{
+    margin:0;
     padding:0;
     background-color:transparent;
     border: 4px solid #D42E12;
     color: #FFF;
     text-align: center;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
   }
     .button-red:hover{
         cursor: pointer;
@@ -184,49 +188,96 @@
   
   /*HEADER конец*/
 
-
+  .under_line_color{
+    text-decoration: underline;
+    text-decoration-color: #C53720;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+    text-underline-position: under;
+}
 
 
 
     /* MAIN Автозапчасти и услуги*/
   .avto-parts
   {
-    margin:0 0 88 0;
+    margin:0;
+    padding:0;
     width: 1640px;
+    height:1244px;
     margin-left: auto;
     margin-right: auto;
     background-image: url("../img/avto-parts fon.png");
-    
-    
+    background-repeat: no-repeat;
   }
   .avto-parts h2{
+    padding:0;
+    margin:0;
     color: var(--black2, #1D1D1D);
     text-align: center;
     font-size: 36px;
     line-height: normal;
     text-transform: uppercase;
   }
+  .avto-parts h2:first-child
+  {
+    padding-top:88px;
+  }
+  .avto-parts h2.under_line_color
+  {
+    margin-bottom:44px;
+  }
+
+
   .avto-parts blockquote{
     color: var(--black2, #1D1D1D);
     text-align: center;
     font-size: 24px;
     line-height: normal;
+    margin:0;
+    padding:0;
+    margin-bottom: 36px;
+  }
+  .avto-parts-list{
+        margin:0 auto 0 auto;
+        padding:0;
+        width:1128px;
+        display:flex;
+        flex-wrap:wrap;
+        gap: 24px;
+
   }
 
   /*полупрозрачность фона пункта АКБ*/
-  .accu{
-    position: relative;
+  .avto-parts-list-item:first-child{
+    padding:0;
     width: 360px;
     height: 400px;
-    background-color: rgb(0,0,0,1);
+    background-image: url("../img/avtoparts AKB.png");
   }
-  .accu img{
-    opacity: 0.2;
+  .accu{
+    padding:0;
+    margin:0;
+    width: 360px;
+    height: 400px;
+    background-color: rgb(0,0,0,0.8);
   }
   .accu p, .accu button{
-    position: absolute;
-    top:0;/*временно*/
-    left:0;/*временно*/
+    margin:0;
+  }
+  .accu p{
+    text-align: center;
+    font-size: 24px;
+    line-height: normal;
+    text-transform: uppercase;
+    padding-top:186px;
+    padding-bottom:66px;
+  }
+  .accu button{
+    width:216px;
+    height:52px;
+    margin:0 0 68px 72px;
+
   }
     
   
@@ -234,71 +285,386 @@
   .service{
         margin:0 auto 0 auto;
         padding: 0;
-        position:relative;
         width: 1640px;
-        background: radial-gradient(24.05% 24.05% at 50% 56.14%, rgba(14, 14, 14, 0.70) 0%, rgba(14, 14, 14, 0.97) 100%);
+        height: 1100px;
+        background-image: url("../img/service fon.png");
     }  
-  .service .fon{
-        opacity: 0.2;
-  }
   
-  .service .content{
-        position: absolute;   
+    .service .content
+    {
+        background: radial-gradient(24.05% 24.05% at 50% 56.14%, rgba(14, 14, 14, 0.70) 0%, rgba(14, 14, 14, 0.97) 100%);
+        width: 1640px;
+        height: 1100px;
         padding: 0;
-        top:0;
-        left:0;
+        margin:0 auto 0 auto;
+        
+    }
+
+  .service-menu
+  {
+    display: flex;
+    margin:0;
+    padding:0;
+    margin-left:256px;
   }
 
+
   .service h2{
-    padding: 0;
+    text-align: center;
+    margin:0 auto 44px auto;
+    padding: 88px  0 0 0;
     font-size: 36px;
     line-height: normal;
     text-transform: uppercase;
   }
+
   .service blockquote{
-    margin: 0;
+    margin: 0 auto 74px auto;
     padding: 0;
     font-size: 24px;
     line-height: normal;
-  }
-  .service-list{
-    margin: 0;
-    padding: 0;
-  }
-  /*полупрозрачность фона пункта Бесплатная консультация*/
-  .service-list-item{
-    position: relative;
-    width: 605px;
-    height: 200px;
-    margin:0 0 40px 0;
-    
-  }
-  
-  .service-list-item .content{
-    position: absolute;
-    top:0;/*временно*/
-    left:0;/*временно*/
+    text-align: center;
+    width: 892px;
   }
 
-  .face, .akb, .diag{
-    position: absolute;
-    top:15px;
-    left:15px;
+  .service-list{
+    margin:0;
+    padding: 0;
+    
   }
+  .service-list-item{
+    width:605px;
+    
+    margin:0;
+    padding:0;
+  }
+
+  .service-list-item h3{
+    padding:0;
+    margin:40px auto 16px 0;
+  
+  }
+
+  .service-list-item p{
+    padding:0;
+    margin:0;
+    font-size: 16px;
+    line-height: normal;
+
+  }
+  .face,.akb, .diag{
+    background-image: url("../img/Rectangle 6.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width:124px;
+    height:120px;
+    margin:40px auto 40px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .service-list-item:nth-child(1){
+    background-image: url("../img/gradient red.png");
+  }
+  .content-item{
+    margin-top: 40px;
+  }
+  .content-item, .service-list-item:not(:nth-child(1)){
+    display:flex;
+    gap:21px;
+  }
+  .service button{
+    width:236px;
+    height: 56px;
+    
+    margin-left:702px;
+    margin-bottom:118px;
+
+  }
+
+
+
+
+
 
 /*ABOUT*/
 
   .about{
-    margin:0 auto 0 auto;
+    margin:0 auto 88px auto;
     padding: 0;
     width: 1640px;
-    position: relative;
+    height: 667px;
+    background-image: url("../img/porsche-normal 1.png");
   }
-  .about .content{
-    position: absolute;   
+  .about .content
+  {
     padding: 0;
-    top:0;
-    left:0;
+    margin:0;
+    background: rgb(0,0,0,0.6);
+    width: 1640px;
+    height: 667px;
+    
+}
+.content h2{
+    padding:88px 0 0 0;
+    margin:88px auto 86px auto;
+    text-align: center;
+    
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+
+}
+.manager{
+    padding:0;
+    margin:0;
+    display:flex;
+    justify-content: center;
+    gap:24px;
+}
+.akb-message{
+
+        width:744px;
+        height:255px;
+        border: 4px solid #C53720;
+        background: rgba(14, 14, 14, 0.60);
+}
+.akb-message p{
+    margin:32px 32px 28px 32px;
+}
+.akb-message button{
+    width: 216px;
+    height: 52px;
+    margin-left:32px;
+}
+
+
+
+/*NEWS*/
+.news{
+  width:1128px;
+  margin: 0;
+  padding:0;
+  margin-left:auto;
+  margin-right: auto;
+
+}
+.news h2
+{
+    color: #1D1D1D;
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 86px;
+}
+.news-list{
+    margin:0 auto 72px auto;
+    padding: 0;
+    width:1128px;
+    display:flex;
+    flex-wrap: wrap;
+    column-gap:24px;
+    row-gap: 0;
+    justify-content: center;
+
+}
+.news-list-item:nth-child(1){
+    width:360px;
+    height:284px;
+    background-image: url("../img/red-avto-news.png")
+}
+.news-list-item:nth-child(1) img{
+  margin:105px 96px;
+}
+
+.news-list-item:nth-child(2){
+    width:360px;
+    height:284px;
+    background-image: url("../img/varta-news.png")
+
+}
+.news-list-item:nth-child(3){
+    width:360px;
+    height:284px;
+    background-image: url("../img/man-news.png")
+
+}
+.news-list-item:nth-child(n+4){
+    width: 360px;
+    height: 138px;
+    background:  #1D1D1D;
+}
+.news-list-item label{
+  padding:0;
+  margin:12px auto auto 20px;
+  color: #C53720;
+  font-size: 12px;
+  line-height: normal;  
+}
+.news-list-item h3{
+  padding:0;
+  margin:12px 20px auto 20px;
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.news-list-item .go{
+  display:block;
+  width: 51px;
+  height:20px;
+  margin:26px 20px auto auto;
+}
+.news-list-item:last-child .go{
+  margin:8px 20px auto auto;
+}
+
+.news button{
+  width: 236px;
+  height:56px;
+  color: #C53720;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;  
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/*Партнеры - aside*/
+.partners{
+  margin:0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1640px;
+  background-color: #FFF;;
+
+}
+
+.partners-list{
+  margin:74px auto auto auto;
+  padding: 0;
+  padding-top:55px;
+  padding-bottom:55px;
+
+  width: 1128px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:40px;
+}
+.partners-list-item:nth-child(n+2).partners-list-item:nth-child(-n+5){
+  margin-right: 4px;
+}
+
+
+/*FOOTER*/
+
+
+.main-footer{
+  margin:0 auto 0 auto;
+  padding: 0;
+  width: 1640px;
+  height: 342px;
+  background-image: url("../img/footer-fon.jpg");
+  background-position: 50%;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+.main-footer-content{
+    padding: 0;
+    
+    margin:0;
+    background: rgb(0,0,0,0.7);
+    width: 1640px;
+    height: 342px;
+    display: flex;
+    justify-content: center;
+}
+.main-footer-list{
+  margin:54px 70px 0 0;
+  padding:0;
+  display: flex;
+  gap:38px;
+}
+.copyright{
+  
+  margin: 0;
+  margin-top: 54px;
+
+  padding:0;
+  width:263px;
+}
+.copyright a{
+  display:block;
+  margin-bottom: 48px;
+}
+
+.main-footer-list-item h3{
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.main-footer-sublist{
+  padding:0;
+  margin:0;
+
+}
+.main-footer-sublist-item a{
+    color: #FFF;
+    font-family: Geometria;
+    font-size: 12px;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin:0;
+    padding:0;
+    opacity: 0.5;
+
+}
+.main-footer-sublist-item{
+  margin-bottom: 16px;
+}
+.contacts
+{
+  margin-top: 54px;
+}
+.contacts button{
+  width: 176px;
+  height: 40px;
+  margin-left: 28px;
+}
+.contacts a{
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  display:flex;
+  gap: 6px;
+}
+.phone{
+  margin-bottom: 12px;
+}
+.mail{
+  margin-bottom: 20px;
 }
 
 
