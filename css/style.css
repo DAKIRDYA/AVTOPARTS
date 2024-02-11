@@ -16,7 +16,7 @@
     font-weight: 700;
     font-style: normal;
   }
-
+/*Общие свойства */
   body 
   {
         margin:0;
@@ -31,6 +31,18 @@
   li{
     list-style-type: none;
   }
+
+  .under_line_color{
+    /*text-decoration: underline;
+    text-decoration-color: #C53720;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+    text-underline-position: under;
+    */
+    border-bottom:4px solid rgba(197, 55, 32, 0);
+    transition: all 0.5s;
+}
+
 /*HEADER*/
   img{
     display: block;
@@ -58,29 +70,35 @@
     line-height: normal;
   }
   .main-nav{
+    padding:0;
+    margin:0;
     opacity: 0.85;
     background: #0E0E0E;
     display:flex;
-    
+    position: relative;
   }
   .nav-logo{
+    padding: 0;
     margin: 24px 32px 18px 268px;
 
   }
+  
   .nav-list
   {
     margin: 50px 31px 26px 0;
     padding:0;
     text-transform: uppercase;
     display: flex;
+    
   }
-  .nav-list-item
+  .nav-list-item:not(:first-child)
   {
         margin:0;
         padding:0;
         margin-left:28px;
   }
   .nav-list-item a{
+    position: relative;
     color: #FFF;
     text-align: center;
     font-size: 16px;
@@ -89,6 +107,30 @@
     line-height: normal;    
     text-decoration: none;
 }
+
+
+  .nav-list-item a::after{
+/*    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(243, 9, 9, 1);
+    content: "";
+*/
+    position: absolute;
+    content:"";
+    top:120%;
+    left:0%;
+    width: 100%;
+    border-bottom: 4px solid rgba(197, 55, 32, 0);
+    transition: all 0.3s;
+  }
+.nav-list-item a:hover::after {
+  border-bottom: 4px solid rgba(197, 55, 32, 1);
+}
+
 
   .button-red{
     margin:0;
@@ -100,9 +142,12 @@
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
+    
+    
   }
     .button-red:hover{
         cursor: pointer;
+        box-shadow: 0 0 4px 2px #D42E12;
     }
 
   
@@ -171,8 +216,12 @@
     justify-content: center;
     gap:0px;
   }
+
   .help-list-item
   {
+    position: relative;
+    z-index:1;
+
     width: 282px;
     height: 272px;
     margin: 0;
@@ -181,23 +230,35 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    
+  }
+  .help-list-item a{
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+  }
+  /* Фон выбранного меню появляется плавно*/
+  .help-list-item a::before{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    z-index:-1;
+    content:"";
+    transition: all 0.3s;
+    background: url("../img/Redfon.png");
+    opacity:0;
+  }
+  .help-list-item a:hover::before
+  {
+    opacity:1;
   }
   
-  .help-list-item:nth-child(1) 
-  {background-image: url("../img/Redfon.png");}
-  
   /*HEADER конец*/
-
-  .under_line_color{
-    text-decoration: underline;
-    text-decoration-color: #C53720;
-    text-decoration-thickness: 4px;
-    text-underline-offset: 8px;
-    text-underline-position: under;
-}
-
-
-
     /* MAIN Автозапчасти и услуги*/
   .avto-parts
   {
@@ -248,37 +309,80 @@
 
   }
 
+
   /*полупрозрачность фона пункта АКБ*/
-  .avto-parts-list-item:first-child{
+
+
+  .avto-parts-list-item{
+    position: relative;
     padding:0;
     width: 360px;
     height: 400px;
+    background-repeat: no-repeat;
+  }
+  .avto-parts-list-item:nth-child(1)
+  {
     background-image: url("../img/avtoparts AKB.png");
   }
-  .accu{
+  .avto-parts-list-item:nth-child(2)
+  {
+    background-image: url("../img/EngineOil-Change.png");
+  }
+  .avto-parts-list-item:nth-child(3)
+  {
+    background-image: url("../img/avtoparts-cosmetic.png");
+  }
+  .avto-parts-list-item:nth-child(4)
+  {
+    background-image: url("../img/avtoparts-acsessuar.png");
+  }
+  .avto-parts-list-item:nth-child(5)
+  {
+    background-image: url("../img/avtoparts--hemical.png");
+  }
+  .avto-parts-list-item:nth-child(6)
+  {
+    background-image: url("../img/avtoparts-rashodniki.png");
+  }
+  .avto-parts-overlay{
     padding:0;
     margin:0;
     width: 360px;
     height: 400px;
-    background-color: rgb(0,0,0,0.8);
+    background-color: rgb(0,0,0);
+    opacity:0;
+
+    position: absolute;
+    transition: all 0.3s ease-out;
+    
+
   }
-  .accu p, .accu button{
+  .avto-parts-overlay p{
     margin:0;
-  }
-  .accu p{
     text-align: center;
     font-size: 24px;
     line-height: normal;
     text-transform: uppercase;
     padding-top:186px;
     padding-bottom:66px;
+    transition: all 0.3s;
+    
   }
-  .accu button{
+  .avto-parts-overlay button{
+    
     width:216px;
     height:52px;
     margin:0 0 68px 72px;
 
   }
+
+  .avto-parts-list-item:hover .avto-parts-overlay
+  {
+    opacity:0.8;
+  }
+  
+
+  
     
   
   /*Услуги*/
@@ -331,12 +435,30 @@
     margin:0;
     padding: 0;
     
+  
+  }
+
+  .service-list-item::before{
+    content: "";
+    position: absolute;
+    z-index:-1;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    transition:all 0.3s ease-out;
+    background-image: url("../img/gradient red.png");
+    opacity:0;
+
   }
   .service-list-item{
+    z-index:1;
+    position: relative;
     width:605px;
-    
     margin:0;
     padding:0;
+    
+    
   }
 
   .service-list-item h3{
@@ -364,9 +486,17 @@
     justify-content: center;
   }
   
-  .service-list-item:nth-child(1){
-    background-image: url("../img/gradient red.png");
+  .service-list-item:hover::before{
+    opacity: 1;
   }
+
+  /*код не работает
+  .service-list .service-list-item:hover ~.service-img{
+    transform:translateX(-460px);
+    opacity:0;
+  }
+  */
+
   .content-item{
     margin-top: 40px;
   }
@@ -382,7 +512,15 @@
     margin-bottom:118px;
 
   }
-
+  #service-img{
+    display:flex;
+    display: block;
+    width:460px;
+    height:601px;
+    overflow: hidden;
+    
+    /*background-image: url('../img/mech.png');*/
+  }
 
 
 
@@ -425,6 +563,29 @@
     justify-content: center;
     gap:24px;
 }
+.shape{
+  position: relative;
+  overflow: hidden;
+  width:360px;
+  height:347px;
+  background-color: #EDEDED;
+  
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 1;
+  width:360px;
+  height:347px;
+  background-image: url("../img/Rectangle 6_2.svg");
+}
+
+.manager_overlay_2{
+  
+}
+
 .akb-message{
 
         width:744px;
@@ -622,12 +783,35 @@
   line-height: normal;
   text-transform: uppercase;
 }
+
 .main-footer-sublist{
   padding:0;
   margin:0;
 
 }
+
+
+.main-footer-sublist-item a::after {
+  position: absolute;
+  content:"";
+  top:-20%;
+  left:0%;
+  width: 100%;
+  height: 140%;
+  background-color:rgba(197, 55, 32, 0) ;
+  z-index: -1;
+/*  border-bottom: 4px solid rgba(197, 55, 32, 0);*/
+  transition: all 0.1s;
+}
+
+.main-footer-sublist-item a:hover::after {
+  background-color:rgba(197, 55, 32, 1) ;
+/*border-bottom: 4px solid rgba(197, 55, 32, 1);*/
+}
+
+
 .main-footer-sublist-item a{
+  position: relative;
     color: #FFF;
     font-family: Geometria;
     font-size: 12px;
@@ -643,6 +827,9 @@
 .main-footer-sublist-item{
   margin-bottom: 16px;
 }
+
+
+
 .contacts
 {
   margin-top: 54px;
@@ -668,7 +855,56 @@
 }
 
 
+/*Стилизация главого меню навигации*/
+.m_company, .m_catalog{
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
 
+  margin:0;
+  padding:0;
+  display: none;
+  position: absolute;
+
+  width:228px;
+  top:100px;
+  color:#aaaaaa;
+
+}
+.m_company{
+  height:264px;
+  left:432px;
+}
+.m_catalog{
+  height:184px;
+  left:564px;
+}
+
+.m_company:hover,.m_catalog:hover{
+  cursor:pointer;
+}
+.m_company_item,.m_catalog_item{
+  margin:0;
+  padding:0 0 0 8px;
+
+  width:228px;
+  height:40px;
+
+  opacity: 0.7;
+  background: #2c2b2b;
+  display: flex;
+  align-items: center;
+}
+
+.m_active{
+  opacity: 0.7;
+  background: #C53720;
+}
+.visible{
+  display:block;
+}
   
 
 

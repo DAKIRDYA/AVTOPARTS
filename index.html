@@ -6,9 +6,10 @@
     <!--Подключение CSS-->
     <link href="css/style.css" rel="stylesheet">
 
-    <!--Подключение шрифтов-->
+    <!--Подключение шрифтов в СSS-->
 </head>
 <body>
+
 <!--Реализовать свой скроллинг по странице
             <button class="up" type="button">
                 <img src="img/img.png" alt="сдвинуть ниже">
@@ -28,15 +29,34 @@
                 <li class="nav-list-item"><a href="#">Услуги</a></li>
                 <li class="nav-list-item"><a href="#">Информация</a></li>
                 <li class="nav-list-item"><a href="#">Контакты</a></li>
+              
            </ul>
            <button class="button-red" type="button">Заказать звонок</button>
            
            <a class="nav-find" href="#"><img src="img/find icon.png" width=25.4 height=26.4 alt="Найти"></a>
            <a class="nav-basket" href="#"><img src="img/basket icon.svg" width=32 height=32 alt="Корзина"></a>
            <div class="nav-basket-count">0</div>
+
+            <!--СубМеню компания-->
+            <ul class="submenu m_company">
+                <li class="m_company_item  m_active"> О компании</li>
+                <li class="m_company_item"> Лицензии</li>
+                <li class="m_company_item"> Партнеры</li>
+                <li class="m_company_item"> Отзывы клиентов</li>
+                <li class="m_company_item"> Реквизиты</li>
+                <li class="m_company_item"> Вакансии</li>
+            </ul>                        
+            <!--СубМеню каталог-->
+            <ul class="submenu m_catalog">
+                <li class="m_catalog_item  m_active"> Аккумуляторы</li>
+                <li class="m_catalog_item"> Автомасла</li>
+                <li class="m_catalog_item"> Аксессуары</li>
+                <li class="m_catalog_item"> Автохимия</li>
+            </ul>                        
+
+
         </nav>
-
-
+        
 
         <h1>Надежные <br> качественные <br>аккумуляторы</h1>
         <button class="button-red go-catalog" type="button">Перейти в каталог</button>
@@ -45,24 +65,30 @@
         <ul class="help-list">
 
             <li class="help-list-item">
+                <a href="#">
                         <img src="img/Nal beznal.png" width=130 height=79 alt="Расчет">
                         <p>Наличный и безналичный <br> расчет</p>
+                </a>
             </li>
             <li class="help-list-item">
+                <a href="#">
                     <img src="img/help.svg" width=84 height=92 alt="Консультация">
                     <p>Техническая помощь и<br> консультация</p>
+                </a>
             </li>
             <li class="help-list-item">
-                <img src="img/quality.svg" width=76 height=91.84 alt="Качество">
-                <p>Только качественная и<br> проверенная продукция</p>                
                 <a class="go-quality" href="#">
+                    <img src="img/quality.svg" width=76 height=91.84 alt="Качество">
+                    <p>Только качественная и<br> проверенная продукция</p>                
+                
                     <img src="img/Union (1).svg" width=51 height=20 alt="Перейти">
                 </a>
             </li>
             <li class="help-list-item">
-                <img src="img/alwaysonline.svg" width=106 height=87 alt="Мы на связи">
-                <p>Мы всегда на связи<br>с 9:00 до 18:00</p>                
                 <a class="go-to-us" href="#">
+                    <img src="img/alwaysonline.svg" width=106 height=87 alt="Мы на связи">
+                    <p>Мы всегда на связи<br>с 9:00 до 18:00</p>                
+                
                     <img  src="img/Union (1).svg" width=51 height=20 alt="Перейти">
                 </a>
             </li>
@@ -80,35 +106,41 @@
             <blockquote>PROAuto - это специализированный интернет магазин востребованных<br> товаров для автомобилей.</blockquote>
             <ul class="avto-parts-list">
                 <li class="avto-parts-list-item">
-                    <div class="accu">
+                    <div class="avto-parts-overlay">
                         <p>Аккумуляторы</p>
                         <button class="button-red" type="button">Заказать онлайн</button>
                     </div>
                 </li>
                 <li class="avto-parts-list-item">
-                    <a href="#">
-                        <img src="img/EngineOil-Change.png"  width=360 height=400 alt="Замена масла">
-                    </a>
+                    <div class="avto-parts-overlay">
+                        <p>Замена масла</p>
+                        <button class="button-red" type="button">Заказать онлайн</button>
+                    </div>
                 </li>
                 <li class="avto-parts-list-item">
-                    <a href="#">
-                        <img src="img/avtoparts-cosmetic.png"  width=360 height=400 alt="Автокосметика">
-                    </a>
+                    <div class="avto-parts-overlay">
+                        <p>Автокосметика</p>
+                        <button class="button-red" type="button">Заказать онлайн</button>
+                    </div>
+                    
                 </li>
                 <li class="avto-parts-list-item">
-                    <a href="#">
-                        <img src="img/avtoparts-acsessuar.png"  width=360 height=400 alt="Автоаксессуары">
-                    </a>
+                    <div class="avto-parts-overlay">
+                        <p>Автоаксессуары</p>
+                        <button class="button-red" type="button">Заказать онлайн</button>
+                    </div>
                 </li>
                 <li class="avto-parts-list-item">
-                    <a href="#">
-                        <img src="img/avtoparts--hemical.png"  width=360 height=400 alt="Автохимия">
-                    </a>
+                    <div class="avto-parts-overlay">
+                        <p>Автохимия</p>
+                        <button class="button-red" type="button">Заказать онлайн</button>
+                    </div>
                 </li>
                 <li class="avto-parts-list-item">
-                    <a href="#">
-                        <img src="img/avtoparts-rashodniki.png" alt="Расходники">
-                    </a>
+                    <div class="avto-parts-overlay">
+                        <p>Расходники</p>
+                        <button class="button-red" type="button">Заказать онлайн</button>
+                    </div>
                 </li>
             </ul>
            
@@ -122,7 +154,7 @@
             <blockquote>Менеджеры компании с радостью ответят на ваши вопросы и помогут с выбором продукции.</blockquote>
             <div class="service-menu">
               <ul class="service-list">
-                <li class="service-list-item">
+                <li class="service-list-item cons">
                     <div class="content-item">
                         <a href="#">
                             <div class="face" >
@@ -135,7 +167,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="service-list-item">
+                <li class="service-list-item change_akb">
                      <a href="#">
                         <div class="akb" >
                             <img src="img/img.png" alt="обмен АКБ">
@@ -146,7 +178,7 @@
                         <p>Принесите нам старую АКБ для легкового автомобиля, и мы предоставим Вам скидку на новый аккумулятор!</p>
                     </div>
                 </li>
-                <li class="service-list-item">
+                <li class="service-list-item diag_akb">
                     <a href="#">
                         <div class="diag" >
                             <img src="img/img.png" alt="диагностика АКБ">
@@ -158,7 +190,12 @@
                     </div>
                 </li>
               </ul>
-              <img src="img/mech.png" width="460" height="601" alt="Механик">
+              <div id="service-img">
+                <!--<img src="img/mech.png" width="460" height="601" alt="Механик">
+                <img src="img/zamena_akb.png" width="460" height="601" alt="Девушка с АКБ">
+                <img src="img/diagnostika_akb.png" width="460" height="601" alt="диагностика АКБ">-->
+                
+               </div>
             </div>
 
             <button class="button-red" type="button">Задать вопрос</button>
@@ -172,8 +209,13 @@
           <div class="content">
             <h2 class="under_line_color">о компании</h2>
             <div class="manager">
-                <img class="back-item" src="img/Rectangle 6.png" width=360 height=347 alt="Фон менеджера">
-                <!--<img src="img/img.png" alt="Менеджер">-->
+                <div class="shape">
+                    <div class="overlay">
+                        <div class="manager_overlay_2"></div>
+                    </div>
+                </div>
+                <!--<img class="back-item" src="img/Rectangle 6.png" width=360 height=347 alt="Фон менеджера">
+                <img src="img/img.png" alt="Менеджер">-->
                 <div class="akb-message"> 
                     <p>Машина плохо заводится? Аккумулятор вас подводит? Не проблема! Вам в «PRO Auto»! 
                         Мы подберём хороший, надёжный, а главное недорогой аккумулятор именно для вашего авто! 
@@ -355,5 +397,6 @@
         </div>
     </div>
     </footer>
+    <script src="js/menu.js"></script>
 </body>
 </html>
